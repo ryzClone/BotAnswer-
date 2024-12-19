@@ -9,7 +9,7 @@ phone_number = '+998996032141'  # o'z telefon raqamingiz
 client = TelegramClient('anon', api_id, api_hash)
 
 async def main():
-    await client.start()
+    await client.start(phone_number)  # Telefon raqamini to'g'ridan-to'g'ri kiriting
     print("Dastur ishga tushmoqda...")
 
     @client.on(events.NewMessage(incoming=True))  # Yangi xabar kelganda
